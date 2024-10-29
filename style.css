@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+}
+
+#quizContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+#imagesRow .option-item {
+  width: 120px; /* Breitere Ansicht für Bilder */
+  height: 120px; /* Höhere Ansicht für vollständiges Bild */
+  background-size: contain; /* Bild passt sich dem Container an */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+#completedContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; /* Kleinerer Abstand zwischen den abgeschlossenen Paaren */
+  justify-content: center;
+  align-items: flex-end; /* Container am unteren Rand ausrichten */
+  max-width: flex; /* Begrenzung der Breite für kompakte Anzeige */
+}
+
+.option-item {
+  padding: 8px;
+  border: 3px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border 0.2s ease;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column; /* Ermöglicht Bild und Text untereinander */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 80px; /* Mindestbreite */
+  max-width: 120px; /* Maximale Breite */
+  word-wrap: break-word; /* Zeilenumbruch bei langen Wörtern */
+  white-space: normal; /* Zeilenumbruch aktivieren */
+  height: auto; /* Höhe automatisch anpassen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.option-item.selected {
+  border-color: #FFD700;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+
+.completed-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #4CAF50; /* Dünnere grüne Umrandung */
+  background-color: #e6ffe6;
+  padding: 5px;
+  border-radius: 4px;
+  width: 60px; /* Kleinere Breite für kompakte Darstellung */
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 0 3px rgba(76, 175, 80, 0.4); /* Leichterer Schatten */
+}
+
+.completed-item {
+  width: 50px; /* Kleinere Bildgröße */
+  height: 50px;
+  margin: 2px 0; /* Weniger Abstand zwischen Bild und Text */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 0.4em; /* Kleinere Schriftgröße */
+}
